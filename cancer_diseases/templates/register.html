@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'C:\Users\Dell\Desktop\PROJECTS\cancer_diseases\static\m.css'%}">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="singup-box">
+        <h1> Register</h1>
+        {% csrf_token %}
+        <form action="register" method="POST">
+            {% csrf_token %}
+            <label>First Name</label>
+            <input type="text"  name="fname" required=""><br>
+            <label>Last Name</label>
+            <input type="text"  name="lname" required=""><br>
+            <label>User Name</label>
+            <input type="text"  name="uname" required=""><br>
+            <label>Email</label>
+            <input type="email"  name="email" required=""><br>
+            <label>Password</label>
+            <input type="password1"  name="pwd1" required=""><br>
+            <label>Confirm Password</label>
+            <input type="password2"  name="pwd2" required=""><br>
+            <br>
+           <!--<pre>Not a member?<a href="">Sign up</a></pre>-->
+           <a href="login.html"><input type="submit" name="" value="Submit"/></a>
+           {% for i in messages %}
+            {{i}}
+            {% endfor %}
+        </form>
+        <br>
+        <p>By clicking the Sing Up button, you agree to our<br>
+            <br>
+        <a href="#">Terms and Conditions </a> and <a href="#">Policy Privacy</a> </p>
+    
+    </div>
+    <p class="pa-2">
+        Already have an account?<a href="login">Login here</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+
+ .b1{
+    opacity:0.5;
+}
+.b1:hover{
+    opacity:1.0;
+    transition: 3s;
+    height:400px;
+    width:500px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 50px blue;
+    transform: rotate(360deg);
+    
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+
+    //font-style: italic;
+    font-weight:bold;
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+a:hover{
+    background-color: black;
+    color:whitesmoke;
+    font-size: 40px;
+}
+p{
+    font-size: 15px;
+    
+    text-align: justify;
+    padding:10px;
+    line-height:40px;
+    text-transform: capitalize;
+   
+   background-color:rgb(218, 253, 248);
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding:10px;
+    line-height:40px;
+    text-transform: capitalize;
+    color:black;
+}

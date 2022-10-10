@@ -1,0 +1,73 @@
+body{
+    background-color:white;
+    background-image: url('ooo.jpg');
+    font-family: 'Roboto',sans-serif;
+
+}
+.singup-box{
+    width: 360px;
+    height: 720px;
+    margin: auto;
+    background-color:aliceblue;
+    border-radius: 3px;
+}
+.login-box{
+    width: 360px;
+    height: 270px;
+    margin: auto;
+    border-radius: 3px;
+    background-color:aliceblue;
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+    
+    
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+input[type="button"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: gray;
+    color: aliceblue;
+    font-size: 18px;
+
+}
+P{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+.pa-2{
+    text-align: center;
+    color: rgb(100, 71, 179);
+    font-size: 15px;
+    margin-top: -10px;
+}
+ .pa-2 a{
+    color:black;
+ }
+ .k{
+    font-size: large;
+    
+    text-align: center;
+
+ }

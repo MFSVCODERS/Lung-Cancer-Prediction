@@ -1,0 +1,221 @@
+{% load static %}
+<html>
+  <head>
+      <title>lung data</title>
+      <style>
+      html, body
+      {
+      min-height: 100%;
+      background:url({% static 'images/bgimage.jpg' %});
+      background-size:cover;
+      }
+      body, div, form, input, select, textarea, label {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: rgb(124, 113, 230);
+      line-height: 20px;
+      }
+      h1 {
+      position: absolute;
+      margin:0;
+      font-size: 60px;
+      color: rgb(224, 103, 22);
+      line-height: 83px;
+      top:50px;
+      }
+      legend {
+      padding: 10px;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 18px;
+      color: white;
+      background-color: #1c87c9;
+      border-radius:5px;
+      }
+      .testbox {
+      display: flex;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      background: #FFFAFA;
+      box-shadow: 0 0 8px #1a1919;
+      }
+      .banner {
+      position: relative;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(36, 41, 19, 0.459);
+      border-radius:10px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+       .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #006622;
+      color: #006622;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background:  #1c87c9;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #0692e8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+    <form action="lungpredict" method="post">
+      <div class="banner">
+        <h1>LUNG CANCER</h1>
+      </div>
+      <br/>
+      <fieldset>
+        <legend>Enter The Details</legend>
+{% csrf_token %}
+        <div class="colums">
+          <div class="item">
+            <label><b>Age</b></label>
+            <input type="text" name="age" required>
+          </div>
+          <div class="item">
+             <label><b>Gender</b></label>
+            <input type="text" placeholder="female : 1 and male : 2" name="gender" required>
+          </div>
+          <div class="item">
+            <label><b>Air_Pollution</b></label>
+            <input type="text" name="airpollution" required>
+          </div>
+          <div class="item">
+            <label><b>Alcohol_Use</b></label>
+            <input type="text" name="alcoholuse" required>
+          </div>
+          <div class="item">
+            <label><b>Dust_Allergy</b></label>
+            <input type="text" name="dustallergy" required>
+          </div>
+          <div class="item">
+           <label><b>OccuPational_Hazards</b></label>
+            <input type="text" name="occupationalhazards" required>
+          </div>
+          <div class="item">
+            <label><b>Genetic_Risk</b></label>
+            <input type="text" name="geneticrisk" required>
+          </div>
+          <div class="item">
+           <label><b>Chronic_Lung_Disease</b></label>
+            <input type="text" name="chroniclungdisease" required>
+          </div>
+          <div class="item">
+           <label><b>Balanced_Diet</b></label>
+            <input type="text" name="balanceddiet" required>
+          </div>
+          <div class="item">
+           <label><b>Obesity</b></label>
+            <input type="text" name="obesity" required>
+          </div>
+          <div class="item">
+           <label><b>Smoking</b></label>
+            <input type="text" name="smoking" required>
+          </div>
+          <div class="item">
+           <label><b>Passive_Smoker</b></label>
+            <input type="text" name="passivesmoker" required>
+          </div>
+          <div class="item">
+           <label><b>Chest_Pain</b></label>
+            <input type="text" name="chestpain" required>
+          </div>
+          <div class="item">
+           <label><b>Coughing_Of_Blood</b></label>
+            <input type="text" name="coughingofblood" required>
+          </div>
+          <div class="item">
+           <label><b>Fatigue</b></label>
+            <input type="text" name="fatigue" required>
+          </div>
+          <div class="item">
+           <label><b>Weight_Loss</b></label>
+            <input type="text" name="weightloss" required>
+          </div>
+          <div class="item">
+           <label><b>Shortness_Of_Breath</b></label>
+            <input type="text" name="shortnessofbreath" required>
+          </div>
+          <div class="item">
+           <label><b>Wheezing</b></label>
+            <input type="text" name="wheezing" required>
+          </div>
+           <div class="item">
+           <label><b>Swallowing_Difficulty</b></label>
+            <input type="text" name="swallowingdifficulty" required>
+          </div>
+           <div class="item">
+           <label><b>Clubbing_Of_Finger_Nails</b></label>
+            <input type="text" name="clubbingoffingernails" required>
+          </div>
+           <div class="item">
+           <label><b>Frequent_Cold</b></label>
+            <input type="text" name="frequentcold" required>
+          </div>
+           <div class="item">
+           <label><b>Dry_Cough</b></label>
+            <input type="text" name="drycough" required>
+          </div>
+          <div class="item">
+           <label><b>Snoring</b></label>
+            <input type="text" name="snoring" required>
+          </div>
+        </div>
+      </fieldset>
+            <div class="btn-block">
+      <button type="submit">PREDICT LUNG</button>
+      </div>
+    </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+{% load static %}
+<html>
+<head>
+<title> Lung Cancer Prediction</title>
+<style>
+body
+<style>
+body
+      {
+      background-color:blue;
+      background-size:cover;
+      border:2px solid;
+      border-radius:10px;
+      }
+      body, div, form, input, select, textarea, label {
+      padding:10px;
+      margin:2px solid;
+      outline: none;
+      font-family:cambria;
+      font-size: 14px;
+      font-weight:bold;
+      color: black;
+      line-height: 20px;
+
+      }
+      .testbox {
+      display: flex;
+      padding: 20px;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background:  #1c87c9;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #0692e8;
+      }
+</style>
+</head>
+
+<body>
+<div>
+        <h1>Hello {{user.first_name}}</h1>
+    <br>
+    <h2><u>Based on the details given:</u></h2></div>
+    <div class="testbox">
+    <div class="colums">
+          <div class="item">
+        <h2>Age:{{age}}</h2>
+          </div>
+
+
+          <div class="item">
+        <h2>Gender:{{gender}}</h2>
+          </div>
+
+
+          <div class="item">
+        <h2>Air_Pollution:{{airpollution}}</h2>
+          </div>
+
+
+          <div class="item">
+        <h2>Alcohol_Use:{{alcoholuse}}</h2>
+          </div>
+
+
+          <div class="item">
+        <h2>Dust_Allergy:{{dustallergy}}</h2></div>
+
+
+          <div class="item">
+        <h2>OccuPational_Hazards:{{occupationalhazards}}</h2></div>
+
+
+          <div class="item">
+        <h2>Genetic_Risk:{{geneticrisk}}</h2></div>
+
+
+          <div class="item">
+        <h2>Chronic_Lung_Disease:{{chroniclungdisease}}</h2></div>
+
+
+          <div class="item">
+        <h2>Balanced_Diet:{{balanceddiet}}</h2></div>
+
+
+          <div class="item">
+        <h2>Obesity:{{obesity}}</h2></div>
+
+
+          <div class="item">
+        <h2>Smoking:{{smoking}}</h2></div>
+
+
+          <div class="item">
+        <h2>Passive_Smoker:{{passivesmoker}}</h2></div>
+
+
+          <div class="item">
+        <h2>Chest_Pain:{{chestpain}}</h2></div>
+
+
+          <div class="item">
+        <h2>Coughing_Of_Blood:{{coughingofblood}}</h2></div>
+
+
+          <div class="item">
+        <h2>Fatigue:{{fatigue}}</h2></div>
+
+
+          <div class="item">
+        <h2>Weight_Loss:{{weightloss}}</h2></div>
+
+
+          <div class="item">
+        <h2>Shortness_Of_Breath:{{shortnessofbreath}}</h2></div>
+
+          <div class="item">
+        <h2>Wheezing:{{wheezing}}</h2></div>
+
+          <div class="item">
+        <h2>Swallowing_Difficulty:{{swallowingdifficulty}}</h2></div>
+
+     <div class="item">
+        <h2>Clubbing_Of_Finger_Nails:{{clubbingoffingernails}}</h2></div>
+
+     <div class="item">
+        <h2>Frequent_Cold:{{frequentcold}}</h2></div>
+
+    <div class="item">
+        <h2>Dry_Cough:{{drycough}}</h2></div>
+
+    <div class="item">
+        <h2>Snoring:{{snoring}}</h2></div>
+    </div>
+    </div>
+<div class="item">
+    <p style="color:red;font-size:30px;"> Result : You Are Affected With {{lungcancer}} Level Lung Cancer</p></div>
+    <form method="get" action="/" >
+    <div class="btn-block">
+        <h3><center><button type="submit" >LOGOUT</button></center></h3>
+    </div>
+    </form>
+</body>
+</html>
